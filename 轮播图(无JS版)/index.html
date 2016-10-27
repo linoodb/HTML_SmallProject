@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>轮播图(无JS版)</title>
+        <style type="text/css">
+        	/* 初始化 */
+        	div, p, ul, li{margin: 0;padding: 0;}
+        	a {text-decoration: none;}
+        	ul {list-style: none;}
+        	/* 外容器 */
+        	div.container {
+        		position: relative;
+        		width: 1280px;
+        		margin: 50px auto;
+        	}
+        	/* 标题介绍 */
+        	div p {
+        		font: 28px "Microsoft YaHei";
+        		position: absolute;left: 0;bottom: 0;
+        		width: 100%;
+        		height: 60px;
+        		line-height: 60px;
+        		background-color: rgba(66, 66, 66, 0.3);
+        	}
+        	div p a{
+        		color: gray;
+        		margin-left: 10%;
+        	}
+        	div p a:hover {color: white;}
+        	/* 导航点 */
+        	div.container ul {
+        		position: absolute; bottom: 0;right: 10%;
+        		height: 60px;
+        		line-height: 60px;
+        	}
+        	div.container ul li {
+        		display: inline-block;
+        		width: 20px;height: 20px;
+      			margin-left: 20px;
+        		border-radius: 20px;
+        		background-color: #666666;
+        	}
+        	div.container ul li:hover {background-color: white;}
+        </style>
+    </head>
+    <body>
+    	<div class="container">
+    		<a href="#"><img src="qlimax.jpg"></a>
+    		<p><a href="#">Qlimax轮播图</a></p>
+    		<ul>
+    			<li class="selected"></li><li></li><li></li><li></li><li></li>
+    		</ul>
+    	</div>
+    </body>
+</html>
