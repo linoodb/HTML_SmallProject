@@ -5,14 +5,18 @@
         <title>轮播图(无JS版)</title>
         <style type="text/css">
         	/* 初始化 */
-        	div, p, ul, li{margin: 0;padding: 0;}
+        	*{margin: 0;padding: 0;}
         	a {text-decoration: none;}
         	ul {list-style: none;}
         	/* 外容器 */
         	div.container {
-        		position: relative;
-        		width: 1280px;
-        		margin: 50px auto;
+        		/*position: relative;*/
+        		/*width: 1280px;*/
+        		/*margin: 50px auto;*/
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
         	}
         	/* 标题介绍 */
         	div p {
@@ -46,7 +50,7 @@
     </head>
     <body>
     	<div class="container">
-    		<a href="#"><img src="qlimax.jpg"></a>
+    		<a href="#"><img src="img/qlimax.jpg" alt="Qlimax轮播图"></a>
     		<p><a href="#">Qlimax轮播图</a></p>
     		<ul>
     			<li class="selected"></li><li></li><li></li><li></li><li></li>
