@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>放大图片效果</title>
+		<style type="text/css">
+			* {margin: 0;padding: 0;}
+
+			div.container {
+				width: 225px;height: 142px;
+				overflow: hidden;
+
+				/* 居中显示 */
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				-webkit-transform: translate(-50%, -50%);
+			}
+			div.container img {
+				-webkit-transition: all 0.5s;
+			}
+			div.container img:hover {
+				-webkit-transform: scale(1.2);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<img src="img/img.jpg" alt="测试图片">
+		</div>
+	</body>
+</html>
