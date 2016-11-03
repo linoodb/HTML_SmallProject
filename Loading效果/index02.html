@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>loading效果</title>
+		<style type="text/css">
+			* {margin: 0;padding: 0;}
+			ul {list-style: none;}
+
+			/* 居中显示 */
+			ul.container {
+				position: absolute;
+				top: 50%;left: 50%;
+				-webkit-transform: translate(-50%, -50%);
+				cursor: default;
+			}
+
+			/* 单个li设置 */
+			ul.container li {
+				display: inline-block;
+				width: 8px;height: 4px;
+				margin-right: 8px;
+				background-color: #aaa;
+			}
+
+			/* 使用一个移动的li来造成进度条效果 */
+			ul.container .move-li {
+				width: 12px;height: 6px;
+				margin: 0 0 -1px -2px;
+				background-color: #333;
+				-webkit-animation: move 1s steps(6, end) both infinite;
+			}
+
+			/* 分成6步动画 */
+			@keyframes move {
+				0% {-webkit-transform: translateX(-96px)}
+				100% {-webkit-transform: translateX(0px)}
+			}
+		</style>
+	</head>
+	<body>
+		<ul class="container">
+			<li></li><li></li><li></li><li></li><li></li><li></li><li class="move-li"></li>
+		</ul>
+	</body>
+</html>

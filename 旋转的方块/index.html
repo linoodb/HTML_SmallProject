@@ -11,7 +11,6 @@
 				width: 300px;
 				margin: 200px auto;
 				position: relative;
-				color: black;
 				cursor: default;
 
 				-webkit-perspective: 2000px; /* 观察点z轴距离 */
@@ -24,6 +23,7 @@
 			/* 单独的一面 */
 			div.side {
 				font: 50px "simsun";
+				color: black;
 				width: 300px;height: 300px;
 				line-height: 300px;
 				text-align: center;
@@ -80,25 +80,60 @@
 
 			/* 关键帧 */
 			@keyframes rotate-container {
-				100% {-webkit-transform: rotate3d(0, 1, 1, -360deg);}
+				0% {
+					-webkit-transform: rotate3d(0, 1, 1, 0deg);
+				}
+				100% {
+					-webkit-transform: rotate3d(0, 1, 1, -360deg);
+				}
 			}
 			@keyframes top {
-				100% {-webkit-transform: rotateX(90deg);}
+				0% {
+					-webkit-transform: rotateX(0deg);
+				}
+				100% {
+					-webkit-transform: rotateX(90deg);
+				}
 			}
 			@keyframes bottom {
-				100% {-webkit-transform: rotateX(-90deg);}
+				0% {
+					-webkit-transform: rotateX(0deg);
+				}
+				100% {
+					-webkit-transform: rotateX(-90deg);
+				}
 			}
 			@keyframes left {
-				100% {-webkit-transform: rotateY(-90deg);}
+				0% {
+					-webkit-transform: rotateY(0deg);
+				}
+				100% {
+					-webkit-transform: rotateY(-90deg);
+				}
 			}
 			@keyframes right {
-				100% {-webkit-transform: rotateY(90deg);}
+				0% {
+					-webkit-transform: rotateY(0deg);
+				}
+				100% {
+					-webkit-transform: rotateY(90deg);
+				}
 			}
 			@keyframes back {
-				100% {-webkit-transform: rotateY(180deg);}
+				0% {
+					-webkit-transform: rotateY(0deg);
+				}
+				100% {
+					-webkit-transform: rotateY(180deg);
+				}
 			}
 			@keyframes front {
-				100% {-webkit-transform: translateZ(300px);}
+				0% {
+					-webkit-transform: translateZ(0px);
+				}
+				100% {
+					-webkit-transform: translateZ(300px);
+				}
 			}
 		</style>
 	</head>
