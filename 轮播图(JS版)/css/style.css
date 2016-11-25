@@ -1,0 +1,90 @@
+* {
+	padding: 0; margin: 0;
+}
+
+/* 背景图 */
+div#background {
+	height: 1992px;
+	background: url("../img/body_bg.jpg") -129px 308px no-repeat;
+}
+/* 标题 */
+div#title {
+	height: 308px;
+	background: url("../img/wrap_bg.jpg") -129px 0px no-repeat;
+}
+/* 容器 */
+div#container {
+	width: 1224px;
+	height: 500px;
+	margin: 0 auto;
+}
+
+/* 轮播页 */
+ul#b-img, ul#s-img {
+	list-style: none;
+}
+ul#b-img li, ul#s-img li {
+	float: left;
+}
+
+/* 大图片 */
+div#wrap-b-img {
+	width: 1224px;
+	height: 500px;
+	overflow: hidden;
+}
+ul#b-img {
+	width: 9999px;
+	height: 500px;
+	position: relative;
+	left: 0; /* 通过控制left来进行轮播 */
+}
+
+/* 小图片 */
+div#wrap-s-img {
+	overflow: hidden;
+	position: relative;
+	top: -37px;
+}
+ul#s-img {
+	position: relative;
+	left: -102px;
+}
+ul#s-img li {
+	width: 204px;
+	height: 162px;
+}
+ul#s-img li img {position: relative; cursor: pointer;}
+ul#s-img li#sbanner-00 img {z-index: 5;}
+ul#s-img li#sbanner-01 img {z-index: 4;}
+ul#s-img li#sbanner-02 img {z-index: 3;}
+ul#s-img li#sbanner-03 img {z-index: 2;}
+ul#s-img li#sbanner-04 img {z-index: 1;}
+ul#s-img li#sbanner-05 img {z-index: 0;}
+
+/* 进度条 */
+ul#s-img div.process {
+	width: 204px;
+	height: 5px;
+	position: relative;
+	top: -8px;
+	left: 102px;
+	z-index: 999;
+}
+ul#s-img div.process .progressing {
+	width: 204px;
+	height: 5px;
+	width: 0%; /* 通过控制宽度来显示进度 */
+}
+ul#s-img li#sbanner-00 div.process {background-color:#7b5596;}
+ul#s-img li#sbanner-00 div.process .progressing {background-color: #49047a;}
+ul#s-img li#sbanner-01 div.process {background-color:#83a2cc;}
+ul#s-img li#sbanner-01 div.process .progressing {background-color: #13478f;}
+ul#s-img li#sbanner-02 div.process {background-color:#e18e40;}
+ul#s-img li#sbanner-02 div.process .progressing {background-color: #b94e00;}
+ul#s-img li#sbanner-03 div.process {background-color:#47acab;}
+ul#s-img li#sbanner-03 div.process .progressing {background-color:#00605f;}
+ul#s-img li#sbanner-04 div.process {background-color:#c86c8c;}
+ul#s-img li#sbanner-04 div.process .progressing {background-color:#a41a4a;}
+ul#s-img li#sbanner-05 div.process {background-color:#9089d6;}
+ul#s-img li#sbanner-05 div.process .progressing {background-color:#4a419e;}
