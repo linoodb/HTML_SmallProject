@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>网易云音乐列表</title>
+	<style type="text/css">
+		/* 初始化 */
+		* { margin: 0; padding: 0; }
+		body {
+			background-color: #1a1a1a;
+			-webkit-user-select: none;
+		    -moz-user-select: none;
+		    -ms-user-select: none;
+		    user-select: none;
+		}
+		ul { list-style: none; cursor: default; }
+		a { text-decoration: none; color: inherit; }
+
+		/* 标题 */
+		.t-title { text-align: center; color: #e2e2e2; font-size: 30px; padding: 18px 0; cursor: default; }
+
+		/* 列表项 */
+		.t-item { float:left; padding-left: 10px; border: 1px solid rgba(0,0,0,0); box-sizing: border-box; font: 12px "Microsoft Yahei"; color: gray; height: 100%; line-height: 26px; }
+
+		/* 分类栏 */
+		.t-head li { height: 28px; border-color: #2e2e2e; }
+		.t-head .h-number { width: 3%; }
+		.t-head .h-title { width: 35%; }
+		.t-head .h-singer { width: 25%; }
+		.t-head .h-album { width: 25%; }
+		.t-head .h-time { width: 10%; }
+
+		/* 歌曲列表 */
+		.t-list li { height: 28px; }
+		.t-list .i-number { width: 3%; text-align: right; padding-right: 10px;}
+		.t-list .i-name { width: 35%; }
+		.t-list .i-singer { width: 25%; }
+		.t-list .i-album { width: 25%; }
+		.t-list .i-time { width: 10%; }
+
+		/* 使用伪类清除浮动 */
+		.clearfix:after { content: "."; display: block; clear: both; height: 0; overflow: hidden; visibility: hidden; }
+		/* 兼容低版本浏览器 */
+		.clearfix { zoom: 1; }
+
+		/* 爱心样式 */
+		.love { width: 2%; background: url("img/icon.png") no-repeat; }
+		.off-love { background-position: 5px -30px; }
+		.off-love:hover { background-position: 5px 0px; }
+		.on-love { background-position: 5px -90px; }
+		.on-love:hover { background-position: 5px -60px; }
+
+		/* 单行双行样式 */
+		.t-list .odd-line { background-color: #1a1a1a; }
+		.t-list .even-line { background-color: #141414; }
+		.odd-line:hover, .even-line:hover { background-color: #212121; }
+
+		/* 选中歌曲 */
+		.t-list .t-selected { background-color: #282828; box-sizing: border-box; border: 1px solid gray; }
+
+		/* 选择框 */
+		#m-wrap { position: fixed; top: 0; left: 0; }
+		.m-menu { width: 120px; height: 90px; font: 14px "Microsoft Yahei";}
+		.m-menu .m-item { height: 30px; line-height: 30px; text-align:center; background-color: #f7f8f9; }
+		.m-menu .m-item:hover { background-color: #e9eaec; }
+		.m-hidden { display: none; }
+
+		/* 输入框 */
+		.i-input { border: 1px solid #7577ce; }
+	</style>
+</head>
+<body>
+	<div id="t-wrap">
+		<h1 class="t-title">歌曲列表</h1>
+		<ul class="t-head clearfix">
+			<li class="t-item h-number"></li>
+			<li id="toggle-love" class="t-item love off-love"></li>
+			<li class="t-item h-title">音乐标题</li>
+			<li class="t-item h-singer">歌手</li>
+			<li class="t-item h-album">专辑</li>
+			<li class="t-item h-time">时长</li>
+		</ul>
+		<ul class="t-list"></ul>
+	</div>
+	<div id="m-wrap" class="m-hidden">
+		<ul class="m-menu">
+			<li class="m-item">删除歌曲</li>
+			<li class="m-item">插入歌曲</li>
+			<li class="m-item">编辑歌曲</li>
+		</ul>
+	</div>
+	<script type="text/javascript" src="track.js"></script>
+	<script type="text/javascript" src="js/compatibility.js"></script>
+	<script type="text/javascript" src="js/control.js"></script>
+
+	<!-- 动态创建的歌曲列表单项格式 -->
+     <!-- <li class="odd-line t-selected">
+         <span class="t-item i-number">01</span>
+         <span class="t-item love off-love"></span>
+         <span class="t-item i-name"><a>小鸡哗哗</a></span>
+         <span class="t-item i-singer"><a>群星</a></span>
+         <span class="t-item i-album"><a>热门华语205</a></span>
+         <span class="t-item i-time">02:40</span>
+     </li> -->
+</body>
+</html>
